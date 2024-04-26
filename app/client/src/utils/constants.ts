@@ -1,4 +1,4 @@
-import { AssetItemProps, SidebarItemProps, SummaryItemProps } from "./interfaces";
+import { AssetItemProps, ModeProps, SidebarItemProps, SummaryItemProps } from "./interfaces";
 
 const sideBarItems: SidebarItemProps[] = [
     {
@@ -30,12 +30,6 @@ const sideBarItems: SidebarItemProps[] = [
         label: 'Settings',
         active: false,
         link: '/settings',
-    },
-    {
-        icon: '/assets/images/sidebar/profile.svg',
-        label: 'Profile',
-        active: false,
-        link: '/profile',
     },
 ]
 
@@ -69,38 +63,62 @@ const assetsItems: AssetItemProps[] = [
     {
         icon: '/assets/images/tokens/qu.svg',
         name: 'QU',
-        amount: '29.9',
-        percentage: 60,
+        amount: '0',
+        percentage: 0,
         colorClassName: 'bg-[#FB03F5]',
     },
     {
         icon: '/assets/images/tokens/qtry.svg',
         name: 'QTRY',
-        amount: '99',
-        percentage: 30,
+        amount: '0',
+        percentage: 0,
         colorClassName: 'bg-[#5CFF9C]',
     },
     {
         icon: '/assets/images/tokens/random.svg',
         name: 'RANDOM',
-        amount: '99',
-        percentage: 20,
+        amount: '0',
+        percentage: 0,
         colorClassName: 'bg-[#FB035C]',
     },
     {
         icon: '/assets/images/tokens/qutil.svg',
         name: 'QUTIL',
-        amount: '99',
-        percentage: 20,
+        amount: '0',
+        percentage: 0,
         colorClassName: 'bg-[#FB03F5]',
     },
     {
         icon: '/assets/images/tokens/qft.svg',
         name: 'QFT',
-        amount: '99',
-        percentage: 10,
+        amount: '0',
+        percentage: 0,
         colorClassName: 'bg-[#50AF95]',
     },
 ]
 
-export { sideBarItems, summaryItems, assetsItems, summaryAccountItems };
+const marketOptions = [
+    {
+        label: 'On',
+        value: true
+    },
+    {
+        label: 'Off',
+        value: false
+    },
+]
+
+const MODES: ModeProps[] = [
+    {
+        wsUrl: 'wss://qsilver.org:5555',
+        type: 'mainnet',
+    },
+    {
+        wsUrl: 'wss://qsilver.org:5555',
+        type: 'testnet',
+    }
+]
+
+const SERVER_URL = "http://localhost:3000";
+
+export { sideBarItems, summaryItems, assetsItems, summaryAccountItems, marketOptions, SERVER_URL, MODES };
