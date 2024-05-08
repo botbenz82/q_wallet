@@ -17,7 +17,7 @@ class MainActivity : ReactActivity() {
     // This is required for expo-splash-screen.
     setTheme(R.style.AppTheme);
     super.onCreate(null)
-  }
+  }    
 
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule

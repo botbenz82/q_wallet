@@ -19,7 +19,7 @@ export default function App() {
     channelInit(RNFS.DocumentDirectoryPath);
   }, []);
   return (
-    <Provider store={store}>
+    <Provider store={store}>      
       <SocketCom />
       <AuthProvider>
         <NetworkProvider defaultNetwork="mainnet">
